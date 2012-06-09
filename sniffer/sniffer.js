@@ -31,6 +31,7 @@ QZONE.Finder.Sniffer = function() {
 			var btn = document.createElement("span");
 			btn.className = "finder_add";
 			nd.appendChild(btn);
+
 		}
 	};
 
