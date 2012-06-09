@@ -12,34 +12,42 @@ a{color:#333;text-decoration:none;font-size:12px;}
 	display: -webkit-box;
 	width:960px;
 	height:480px;	
-	padding:0;
+	padding:0;	
 	margin:-240px -480px;
 	position: absolute;
 	top:50%;
 	left:50%;
 }
+
+.popup_qzonefinder_hd{position:relative;}
 .popup_qzonefinder_hd h2{
-	-webkit-padding-end: 24px;
 	color:#333;
-	font-size: 20px;
-	margin: 0;
-	padding: 14px 17px 14px;
-	text-shadow: white 0 1px 2px;
-	position:relative;
+	font-size:20px;
+	margin:0;
+	padding:15px 30px;
+	text-shadow:#fff 0 1px 2px;
 }
 .popup_qzonefinder_close{
 	width:24px;
 	height:24px;
+	background:url(img/btn_close.png) no-repeat 7px 7px;;
 	font-size:20px;
 	overflow: hidden;
+	text-indent:-999px;
 	text-align:center;
-	right:14px;
-	top:14px;	
-	position: absolute;
+	right:10px;
+	top:10px;	
+	position:absolute;
 }
 
+.popup_qzonefinder_close:hover{
+	background-position:-14px 7px;
+}
 .popup_qzonefinder_ft{position:absolute;bottom:0;left:0;width:100%;}
-.qzmod_tag{height:40px;border-top:1px solid #ccc;}
+.qzmod_tag{
+	height:40px;;
+	box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1),inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
 .qzmod_tag h5{padding:0 0 0 14px;}
 .qzmod_tag h5,.qzmod_tag ul{float:left;height:30px;line-height:30px;margin:5px 0 0 0;}
 .qzmod_tag li{float:left;}
@@ -50,4 +58,40 @@ a{color:#333;text-decoration:none;font-size:12px;}
 .qzmod_tag a.icon_article:before{background-position:0 0;}
 .qzmod_tag a.icon_photo:before{background-position:0 -16px;}
 .qzmod_tag a.icon_music:before{background-position:0 -80px;}
-.qzmod_tag a.icon_twitt:before{background-position:0 -32px;}
+.qzmod_tag a.icon_tweet:before{background-position:0 -32px;}
+
+
+/** 内容区域 **/
+.qzmod_itemlist{position:relative;margin:0 30px;height:350px;overflow:hidden;}
+.qzmod_itemlist:after{content:'\20';clear:both;display:block;}
+.qzmod_itemlist .item{width:75px;height:100px;position:absolute;}
+.qzmod_itemlist.fixed .item{float:left;margin:0 62px 20px 0;position:static;} 
+.qzmod_itemlist .item:nth-child(7n){margin-right:0;}
+.qzmod_itemlist .item .item_blog,
+.qzmod_itemlist .item .item_photo,
+.qzmod_itemlist .item .item_music,
+.qzmod_itemlist .item .item_tweet{border-radius:10px;width:75px;height:75px;background:url(img/icon_baseapp.png);box-shadow:rgba(0, 0, 0, 0.5) 0 1px 2px;background-size:75px auto;}
+.qzmod_itemlist .item .item_blog{background-position:0 0;}
+.qzmod_itemlist .item .item_photo{background-position:0 -75px;}
+.qzmod_itemlist .item .item_music{background-position:0 -375px;}
+.qzmod_itemlist .item .item_tweet{background-position:0 -150px;}
+.qzmod_itemlist .item .item_folder{width:72px;height:72px;background:#333;border:3px solid #d3d3d3;border-radius:10px;box-shadow:rgba(0, 0, 0, 0.5) 0 1px 2px;}
+.qzmod_itemlist .item .item_folder .item_s{width:36px;height:36px;float:left;}
+.qzmod_itemlist .item .item_folder .item_s i{width:24px;height:24px;margin:6px;float:left;background-image:url(img/icon_baseapp.png);background-size:24px 216px;background-repeat:no-repeat;border-radius:3px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_blog{background-position:0 0;}
+.qzmod_itemlist .item .item_folder .item_s .icon_photo{background-position:0 -24px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_music{background-position:0 -120px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_tweet{background-position:0 -48px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(1) i{margin:8px 0 0 10px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(2) i{margin:8px 0 0 4px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(3) i{margin:4px 0 0 10px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(4) i{margin:4px 0 0 4px;}
+
+.qzmod_itemlist .item .item_holder{border:1px dashed green;width:74px;height:74px;border-radius:10px;}
+.qzmod_itemlist .item .name{height:20px;line-height:20px;margin:5px 0 0 0;text-shadow: 
+rgba(0, 0, 0, 0.3) 1px 2px 1px;text-align:center;width:75px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+/** 内容分页 **/
+.qzmod_itempage{margin:0 15px 0 15px;text-align:center;height:30px;}
+.qzmod_itempage a{border-radius:3px;overflow:hidden;display:inline-block;background:#999;text-indent:-999px;width:6px;height:6px;margin:12px 5px;}
+.qzmod_itempage a.current{background:#000;}
