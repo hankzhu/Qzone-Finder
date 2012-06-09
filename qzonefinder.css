@@ -24,7 +24,7 @@ a{color:#333;text-decoration:none;font-size:12px;}
 	color:#333;
 	font-size:20px;
 	margin:0;
-	padding:15px;
+	padding:15px 30px;
 	text-shadow:#fff 0 1px 2px;
 }
 .popup_qzonefinder_close{
@@ -35,8 +35,8 @@ a{color:#333;text-decoration:none;font-size:12px;}
 	overflow: hidden;
 	text-indent:-999px;
 	text-align:center;
-	right:7px;
-	top:15px;	
+	right:10px;
+	top:10px;	
 	position:absolute;
 }
 
@@ -62,9 +62,10 @@ a{color:#333;text-decoration:none;font-size:12px;}
 
 
 /** 内容区域 **/
-.qzmod_itemlist{position:relative;margin:0 15px;height:356px;overflow:hidden;}
+.qzmod_itemlist{position:relative;margin:0 30px;height:350px;overflow:hidden;}
 .qzmod_itemlist:after{content:'\20';clear:both;display:block;}
-.qzmod_itemlist .item{float:left;width:75px;height:100px;margin:0 60px 20px 0;}
+.qzmod_itemlist .item{width:75px;height:100px;position:absolute;}
+.qzmod_itemlist.fixed .item{float:left;margin:0 62px 20px 0;position:static;} 
 .qzmod_itemlist .item:nth-child(7n){margin-right:0;}
 .qzmod_itemlist .item .item_blog,
 .qzmod_itemlist .item .item_photo,
@@ -75,18 +76,18 @@ a{color:#333;text-decoration:none;font-size:12px;}
 .qzmod_itemlist .item .item_music{background-position:0 -375px;}
 .qzmod_itemlist .item .item_tweet{background-position:0 -150px;}
 .qzmod_itemlist .item .item_folder{width:72px;height:72px;background:#333;border:3px solid #d3d3d3;border-radius:10px;box-shadow:rgba(0, 0, 0, 0.5) 0 1px 2px;}
-.qzmod_itemlist .item .item_folder .item_s{width:20px;height:20px;float:left;margin:1px;}
-.qzmod_itemlist .item .item_folder .item_s i{width:16px;height:16px;margin:2px;float:left;background-image:url(img/icon_baseapp.png);background-size:16px 144px;background-repeat:no-repeat;border-radius:3px;}
+.qzmod_itemlist .item .item_folder .item_s{width:36px;height:36px;float:left;}
+.qzmod_itemlist .item .item_folder .item_s i{width:24px;height:24px;margin:6px;float:left;background-image:url(img/icon_baseapp.png);background-size:24px 216px;background-repeat:no-repeat;border-radius:3px;}
 .qzmod_itemlist .item .item_folder .item_s .icon_blog{background-position:0 0;}
-.qzmod_itemlist .item .item_folder .item_s .icon_photo{background-position:0 -16px;}
-.qzmod_itemlist .item .item_folder .item_s .icon_music{background-position:0 -80px;}
-.qzmod_itemlist .item .item_folder .item_s .icon_tweet{background-position:0 -32px;}
-.qzmod_itemlist .item .item_folder .item_s:nth-child(1) i{margin:3px 0 0 3px;}
-.qzmod_itemlist .item .item_folder .item_s:nth-child(2) i{margin:3px 0 0 1px;}
-.qzmod_itemlist .item .item_folder .item_s:nth-child(3) i{margin:1px 0 0 3px;}
-.qzmod_itemlist .item .item_folder .item_s:nth-child(4) i{margin:1px 0 0 1px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_photo{background-position:0 -24px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_music{background-position:0 -120px;}
+.qzmod_itemlist .item .item_folder .item_s .icon_tweet{background-position:0 -48px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(1) i{margin:8px 0 0 10px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(2) i{margin:8px 0 0 4px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(3) i{margin:4px 0 0 10px;}
+.qzmod_itemlist .item .item_folder .item_s:nth-child(4) i{margin:4px 0 0 4px;}
 
-.qzmod_itemlist .item .item_holder{border:1px dashed #000;width:74px;height:74px;border-radius:10px;}
+.qzmod_itemlist .item .item_holder{border:1px dashed green;width:74px;height:74px;border-radius:10px;}
 .qzmod_itemlist .item .name{height:20px;line-height:20px;margin:5px 0 0 0;text-shadow: 
 rgba(0, 0, 0, 0.3) 1px 2px 1px;text-align:center;width:75px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 
