@@ -8,16 +8,16 @@ QZONE.Finder.db = {
 		var db = window.localStorage.getItem('finder_db');
 
 		if(!db){
-			window.localStorage.setItem('finder_db',{list:[],lastmodified:(new Date()),lastid:-1});
+			QZONE.Finder.db.saveToDB({list:[],lastmodified:(new Date()),lastid:-1});
 		}
 	},
 
 	getDB : function(){
-		return window.localStorage.getItem('finder_db');
+		return JSON.parse( window.localStorage.getItem('finder_db') );
 	},
 
 	saveToDB : function(db){
-		return window.localStorage.setItem('finder_db',db);
+		return window.localStorage.setItem('finder_db', JSON.stringify(db));
 	},
 
 	add : function(obj){
