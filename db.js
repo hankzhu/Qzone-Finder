@@ -14,7 +14,7 @@ QZONE.Finder.db = {
 
 	getDB : function(){
 		return window.localStorage.getItem('finder_db');
-	}
+	},
 
 	saveToDB : function(db){
 		return window.localStorage.setItem('finder_db',db);
@@ -100,14 +100,29 @@ QZONE.Finder.file = {
 QZONE.Finder.tween = {
 	flying : function(dom){
 		QZFL.effect.run(dom, {
-		  top:'100',
-	      width: '+=150',
-	      height: '+=100'
+	    	left: '700'
 	    }, {
-	        	duration : 1000,
-	            complete : function(){},
-	            change : QZFL.emptyFn,
-	            start : QZFL.emptyFn
+	        duration : 700,
+	        easing : 'ease-in',
+	        complete : function(){
+
+	        },
+	        change : QZFL.emptyFn,
+	        start : QZFL.emptyFn
 	    });
+
+	    QZFL.effect.run(dom, {
+			top:'100'
+	    }, {
+	        duration : 700,
+	        easing : 'ease-out',
+	        complete : function(){
+
+	        },
+	        change : QZFL.emptyFn,
+	        start : QZFL.emptyFn
+	    });
+
+
 	}
 };
